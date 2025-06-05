@@ -5,6 +5,10 @@ resources/
 # Hugo cache
 .hugo_build.lock
 
+# Migration files
+import/
+migrate_substack.py
+
 # macOS
 .DS_Store
 .DS_Store?
