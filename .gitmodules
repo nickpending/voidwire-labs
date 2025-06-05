@@ -1,0 +1,18 @@
+[submodule "themes/terminal"]
+	path = themes/terminal
+	url = https://github.com/panr/hugo-theme-terminal.git
+[submodule "themes/even"]
+	path = themes/even
+	url = https://github.com/olOwOlo/hugo-theme-even.git
+[submodule "themes/coder"]
+	path = themes/coder
+	url = https://github.com/luizdepra/hugo-coder.git
+[submodule "themes/Pa"]
+	path = themes/Pa
+	url = https://github.com/adityatelange/hugo-PaperMod.git
+[submodule "themes/PaperMod"]
+	path = themes/PaperMod
+	url = https://github.com/adityatelange/hugo-PaperMod.git
+[submodule "themes/paper"]
+	path = themes/paper
+	url = https://github.com/nanxiaobei/hugo-paper.git

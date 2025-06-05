@@ -1,0 +1,13 @@
+/* Force reduce spacing after home-info */
+.home-info {
+    margin-bottom: -1rem !important;
+}
+
+/* Remove gray borders around all post entries */
+.post-entry,
+.first-entry,
+.tag-entry {
+    border: none !important;
+    box-shadow: none !important;
+    background: none !important;
+}

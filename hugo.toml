@@ -1,0 +1,56 @@
+baseURL = "https://labs.voidwire.info"
+languageCode = "en-us"
+title = "Voidwire Labs"
+theme = "PaperMod"
+
+[params]
+  description = "Security research, tools, and random observations"
+  author = "nickpending"
+  showReadingTime = true
+  showPostNavLinks = true
+  showBreadCrumbs = false
+  showCodeCopyButtons = true
+  
+  # Analytics
+  [params.analytics]
+  [params.analytics.plausible]
+  domain = "labs.voidwire.info"
+  
+  # SEO
+  images = ["/assets/images/labs.voidwire.info-preview.svg"]
+  
+  # Home-Info mode - shows intro at top of posts list
+  [params.homeInfoParams]
+  Title = "Hi, I'm Rudy (@nickpending)"
+  Content = "I build security tools and write about my discoveries, epiphanies, and ruminations along the way. Exploring how and where AI can help cybersecurity."
+  
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/nickpending"
+  
+[[params.socialIcons]]
+  name = "linkedin"
+  url = "https://www.linkedin.com/in/securityarchitecture/"
+  
+[[params.socialIcons]]
+  name = "mastodon"
+  url = "https://infosec.exchange/@nickpending"
+
+[menu]
+  [[menu.main]]
+  identifier = "posts"
+  name = "Posts"
+  url = "/posts/"
+  weight = 10
+  
+  [[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 20
+
+[markup]
+  [markup.highlight]
+    style = "github"
+    lineNos = true
+    noClasses = false

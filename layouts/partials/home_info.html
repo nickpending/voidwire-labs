@@ -1,0 +1,17 @@
+{{- with site.Params.homeInfoParams }}
+<article class="first-entry home-info">
+    <div style="display: flex; align-items: flex-start; gap: 2rem; margin-bottom: 2rem;">
+        <img src="https://www.gravatar.com/avatar/d2081d9c570dcbc455f8171ff23dee3b?s=180" 
+             alt="nickpending" 
+             style="border-radius: 50%; width: 180px; height: 180px;">
+        <div style="flex: 1;">
+            <h1 style="margin: 0 0 0.5rem 0;">{{ .Title | markdownify }}</h1>
+            <div style="margin-bottom: 1rem;">
+                {{ .Content | markdownify }}
+            </div>
+            {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
+        </div>
+    </div>
+    <hr style="border: none; border-top: 1px solid var(--border); margin: 0;">
+</article>
+{{- end -}}
