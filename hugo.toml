@@ -4,7 +4,7 @@ title = "Voidwire Labs"
 theme = "PaperMod"
 
 [params]
-  description = "Security research, tools, and random observations"
+  description = "Breaking Things to Build Better Things"
   author = "nickpending"
   showReadingTime = true
   showPostNavLinks = true
