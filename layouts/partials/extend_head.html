@@ -2,5 +2,6 @@
 {{- if hugo.IsProduction | or (eq site.Params.env "production") }}
 {{- with site.Params.analytics.plausible }}
 <script defer data-domain="{{ .domain }}" src="https://plausible.io/js/script.js"></script>
+<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
 {{- end }}
 {{- end }}
