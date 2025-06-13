@@ -24,9 +24,9 @@ The solution wasn't better architecture or smarter prompting. It was recognizing
 Initially, I thought better prompting would solve everything. I spent months refining my development workflows, iterating through different approaches based on each failure mode I encountered. Each time Claude hit a wall, I'd revise my process:
 
 - **First iteration**: Better context organization and prompt structure
-- **Second iteration**: Systematic validation and quality checks ([detailed in my analysis of LLM development patterns](https://labs.voidwire.info/the-systematic-breakthrough/))
-- **Third iteration**: Memory optimization and selective context loading ([explored in my work on context management](https://labs.voidwire.info/claude-code-memory-optimization/))
-- **Fourth iteration**: Embedding security checks into the development flow ([covered in my ambient security approach](https://labs.voidwire.info/making-security-ambient-seamless-checks-in-the-age-of-vibe-coding/))
+- **Second iteration**: Systematic validation and quality checks ([detailed in my analysis of LLM development patterns](https://labs.voidwire.info/posts/the-systematic-breakthrough/))
+- **Third iteration**: Memory optimization and selective context loading ([explored in my work on context management](https://labs.voidwire.info/posts/claude-code-memory-optimization/))
+- **Fourth iteration**: Embedding security checks into the development flow ([covered in my ambient security approach](https://labs.voidwire.info/posts/making-security-ambient-seamless-checks-in-the-age-of-vibe-coding/))
 
 Each refinement helped, but the fundamental problem persisted: **well-architected systems were still overwhelming LLMs**. The issue wasn't process - it was cognitive architecture.
 
