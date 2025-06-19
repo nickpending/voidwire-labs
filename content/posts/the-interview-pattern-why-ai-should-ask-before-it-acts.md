@@ -4,12 +4,8 @@ date: 2025-06-18
 categories: [ai, development]
 tags: ["ai", "development", "patterns", "workflow"]
 draft: false
-description: "You ask AI to implement something seemingly straightforward. It builds exactly what you asked for. Then you realize it's not what you actually needed. There's a pattern emerging to address this: let the AI interview you first."
+description: "A short exploration of why letting AI interview you before implementation leads to better outcomes than discovering problems after the fact."
 ---
-
-# The Interview Pattern: Why AI Should Ask Before It Acts
-
-*A short exploration of why letting AI interview you leads to better outcomes*
 
 You ask AI to implement something seemingly straightforward. It builds exactly what you asked for. Then you realize it's not what you actually needed - wrong UX behavior, missing security considerations, breaks existing functionality. There's a pattern emerging to address this: let the AI interview you first.
 
