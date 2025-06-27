@@ -4,10 +4,8 @@ date: 2025-06-27
 categories: [ai, development]
 tags: ["ai", "development", "claude", "workflow", "context"]
 draft: false
-description: "Building on the three-layer memory system to eliminate the constant re-explaining of development preferences through systematic context generation."
+description: "Building on the three-layer memory system to eliminate the constant re-explaining of development preferences."
 ---
-
-Building on the three-layer memory system to eliminate the constant re-explaining of development preferences
 
 ## TL;DR
 
@@ -15,11 +13,11 @@ Building on the three-layer memory system to eliminate the constant re-explainin
 
 - **The research process was repeatable.** Looking at what made my Python context effective, I noticed the same pattern: current tools, common mistakes, workflow problems. The structure was consistent across languages.
 
-- **Meta-prompt generates research-backed contexts.** Feed it "python" or "golang" and get comprehensive development contexts through 12-15 targeted searches of authoritative sources.
+- **Prompt template generates research-backed contexts.** Feed it "python" or "golang" and get comprehensive development contexts through 12-15 targeted searches of authoritative sources.
 
-- **Claudex repository demonstrates the approach.** Contains the meta-prompt template plus generated examples for multiple languages. It's the process and outputs, not automation.
+- **Claudex repository demonstrates the approach.** Contains the prompt template plus generated examples for multiple languages. It's the process and outputs, not automation.
 
-- **Process over automation.** The meta-prompt guides research and ensures quality standards rather than just generating content. Repeatable thinking, not mindless generation.
+- **Process over automation.** The template guides research and ensures quality standards rather than just generating content. Repeatable thinking, not mindless generation.
 
 ## Beyond Memory Optimization
 
@@ -39,7 +37,7 @@ What if I could make the context generation itself repeatable?
 
 ## A Research Template
 
-The solution became a meta-prompt that transforms "python" or "golang" into comprehensive, research-backed development contexts. Not automation - just a repeatable process that keeps the research quality while making it consistent.
+The solution became a prompt template that transforms "python" or "golang" into comprehensive, research-backed development contexts. Not automation - just a repeatable process that keeps the research quality while making it consistent.
 
 The template guides Claude through 12-15 targeted searches covering:
 - Current official versions and release status
@@ -60,20 +58,20 @@ The key thing: this isn't documentation generation - it's compressed expertise c
 
 ## The Claudex Repository
 
-I'm putting this approach into practice with [claudex](https://github.com/nickpending/claudex). The repository contains the meta-prompt template and generated examples for multiple languages - showing the process and what it produces, not how to automate it.
+I'm putting this approach into practice with [claudex](https://github.com/nickpending/claudex). The repository contains the prompt template and generated examples for multiple languages - showing the process and what it produces, not how to automate it.
 
 A couple of friends have pointed out that I probably spend more time building guardrails than actually building apps. They're not wrong. But in this case, the investment seems worth it. The constant re-explaining was genuine friction, and having a repeatable way to generate quality contexts feels like building a well-oiled machine rather than just more overhead.
 
 The repo contains:
-- The meta-prompt template  
+- The prompt template  
 - Generated examples for different languages
 - Basic documentation on using the template
 
-Think of it as both a practical tool and an experiment in AI context design. The meta-prompt becomes a process others can use, while the generated examples show the quality and structure possible.
+Think of it as both a practical tool and an experiment in AI context design. The template becomes a process others can use, while the generated examples show the quality and structure possible.
 
 ## Process Over Automation
 
-What I find interesting about this approach is that it prioritizes thoughtful process over automation. The meta-prompt doesn't just generate content - it guides research, ensures current information, and applies consistent quality standards.
+What I find interesting about this approach is that it prioritizes thoughtful process over automation. The template doesn't just generate content - it guides research, ensures current information, and applies consistent quality standards.
 
 This connects to broader questions about how we structure knowledge for AI systems. Rather than feeding them everything we know, we're learning to compress expertise into focused, actionable guidance that survives across conversations.
 
@@ -85,6 +83,6 @@ But the real value might be in the process itself. Moving from ad-hoc context cr
 
 The constant re-explaining never fully goes away - technology evolves, tools change, new patterns emerge. But having a repeatable approach to capturing and structuring that knowledge makes the process more intentional and the results more valuable.
 
-The meta-prompt becomes a way to think more deliberately about what makes AI context effective, not just for individual workflows but for the broader challenge of human-AI collaboration in technical domains.
+The template becomes a way to think more deliberately about what makes AI context effective, not just for individual workflows but for the broader challenge of human-AI collaboration in technical domains.
 
 *This builds on the memory optimization work by making the creation of the language-specific layer repeatable. Next: exploring how teams can adapt this approach for organizational knowledge sharing.*
