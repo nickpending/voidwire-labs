@@ -1,13 +1,36 @@
-/* Force reduce spacing after home-info */
-.home-info {
-    margin-bottom: -1rem !important;
+/* Custom project styling */
+.project-image {
+    float: left;
+    margin: 0 24px 24px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    max-width: 300px;
+    height: auto;
 }
 
-/* Remove gray borders around all post entries */
-.post-entry,
-.first-entry,
-.tag-entry {
-    border: none !important;
-    box-shadow: none !important;
-    background: none !important;
+/* Clear floats after each project section */
+.project-section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Add some breathing room around project content */
+.project-content {
+    overflow: hidden; /* Contains floated elements */
+}
+
+/* Ensure links don't break the layout */
+.project-image + p {
+    margin-top: 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .project-image {
+        float: none;
+        display: block;
+        margin: 0 auto 24px auto;
+        max-width: 100%;
+    }
 }
