@@ -7,6 +7,18 @@ draft: false
 description: "Why LLMs excel at building software but struggle when put in control of runtime decisions and execution flow."
 ---
 
+## TL;DR
+
+- **LLMs are incredible force multipliers for building software.** I'm building multiple projects concurrently with Claude Code. They excel at ideation, planning, and code generation when you do it right.
+
+- **But they struggle with predictable runtime behavior.** They're probabilistic systems at their core - you'll get different results across runs no matter how much you prompt engineer. The variation isn't a bug; it's the architecture.
+
+- **Design for their nature, don't fight it.** They can be embedded in software when you account for variability. Great for chatbots, content generation, analysis work where you want different responses.
+
+- **Don't put them in control when you need consistency.** When you need reliable orchestration or predictable execution, use traditional deterministic systems. Let LLMs be brilliant collaborators in the creative work.
+
+- **The innovation isn't making them deterministic.** It's using them where they dominate - ideation, planning, and code generation - while letting traditional systems handle execution.
+
 There's a pattern I keep observing with LLMs. They can help you write Python scripts, React components, automation tools, even complex codebases like my [Prismis](https://www.prismis.io) project. They can be embedded in that final software when you design for their nature—tolerance for variability, rigorous structural constraints, interactive oversight.
 
 But put them in control of runtime decisions, execution flow, or consistent orchestration, and you'll often watch them vary in ways that can seem almost willful. This isn't a limitation to overcome. It's the fundamental nature of these systems, and understanding it changes how we should think about building with AI.
