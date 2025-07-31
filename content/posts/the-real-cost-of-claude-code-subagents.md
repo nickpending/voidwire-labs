@@ -27,7 +27,7 @@ Which is fine—if you're burning them for the right reasons. A blog writer suba
 
 ## The Token Reality
 
-Subagents just launched, and after a few iterations with a single project, the token consumption became noticeable:
+Subagents just launched, and after a few iterations with a single project, I saw each subagent using around 50K tokens and thought damn, that's a lot of tokens:
 
 - `/plan-task` implementing a feature: ~5-10K tokens, full visibility
 - code-implementer subagent doing the same work: 50-100K tokens, outputs only
