@@ -11,6 +11,20 @@ For those dabbling with Claude Code subagents: they consume a TON of tokens.
 
 Which is fine—if you're burning them for the right reasons. A blog writer subagent? Maybe that works. You see the final output, judge quality, iterate. But when subagents touch multiple files across your codebase? That's where things can get problematic.
 
+## TL;DR
+
+- **Subagents burn 10x more tokens than custom commands.** ~50-100K tokens for implementation work vs ~5-10K for the same task with `/plan-task`. Your mileage may vary, but the difference is substantial.
+
+- **You lose observability when it matters most.** Custom commands show every decision in your terminal history. Subagents? You're reverse-engineering what happened from outputs.
+
+- **Heavy scaffolding doesn't fix the core issue.** I built mandatory file reads, forced outputs, strict templates. Still paying the token tax without gaining visibility.
+
+- **They're perfect for deep architectural analysis.** When you need comprehensive exploration of complex problems, the 50K tokens become worth it. That websocket issue? Exactly when to call in a subagent.
+
+- **Match the tool to the type of work.** Subagents for exploration and analysis. Custom commands for implementation and iteration. Simple tasks? Custom commands win on economics alone.
+
+- **"Never trust, always verify" only works when you can see.** My workflow depends on catching problems as they happen. Hard to do when the work happens in a black box.
+
 ## The Token Reality
 
 Subagents just launched, and after a few iterations with a single project, the token consumption became noticeable:
@@ -113,7 +127,7 @@ If you're building with Claude Code subagents:
 - **For architecture decisions:** Subagents can explore options you hadn't considered
 - **For research tasks:** Their thoroughness finds patterns and approaches
 - **For implementation:** Custom commands let you see and fix what breaks
-- **For workflows:** Commands build institutional knowledge through iteration
+- **For workflows:** Commands build institutional knowledge through repeated use
 - **For simple tasks:** Consider if custom commands might be more efficient
 
 The innovation isn't making subagents cheaper or more transparent. It's understanding when their comprehensive analysis justifies the cost and complexity.
