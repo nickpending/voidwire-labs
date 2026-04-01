@@ -38,6 +38,8 @@ And just so we're clear, the idea is this: I should be able to say — speaking 
 
 This idea of intent decomposition — that's what I'm calling it — does this work FOR you. Especially if there's pre-existing content or data, it takes some of the burden off you to articulate and encode all of your expertise at once. Its output is something you can review, revise, save, edit, and make yours. It's done a lot of the heavy lifting for you.
 
+And to be clear, this isn't just gathering more context for the model to read. The agent produces something new — a synthesized, expanded version of my request that didn't exist before. An explore agent gives the model more information. This gives the model a clearer picture of what I'm actually asking for.
+
 Some of you might be thinking, "Why didn't you just say 'build me a plan for how I would do this'?" You could. But you'd also have to encode all the aspects of my intent decomposition agent to get the same results, and you'd need to do that every time. If you're doing it in your main session, the existing context and memories are going to affect how it performs.
 
 I don't think this is better prompting in the traditional sense. You could maybe call it context engineering — I am managing context a lot better and I'm not taking as many turns. But it's also about time management and context switching on the human level. You don't want to keep context switching, especially if you're multitasking, which I think most of us are now as we orchestrate multiple agents doing a variety of work. Even within the same domain, it might be different enough that you've got a context switch. You need the agent to be your force multiplier.
