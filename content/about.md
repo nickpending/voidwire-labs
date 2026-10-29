@@ -1,46 +1,32 @@
 ---
 title: "About"
-date: 2024-06-04
+date: 2026-10-28
 draft: false
 ---
 
-## What I Do
+I'm Rudy Ruiz. Principal security engineer, twenty-plus years in, working where AI meets offensive security.
 
-I build security tools and write about my discoveries along the way. My work spans reconnaissance automation, vulnerability research, and exploring how AI can actually help cybersecurity—not just the marketing hype, but where it genuinely solves real problems.
+## What I'm after
 
-## Current Projects
+Encode tacit security expertise into systems that scale: agents that eliminate whole vulnerability classes instead of finding one bug at a time. Under that sits an older aim, to replace checkbox security and fear-based risk assessment with data-driven decisions and AI-augmented human judgment.
 
-**MCP Integrations** - Building Model Context Protocol servers that bring security data directly into AI workflows. My [mcp-censys](https://github.com/nickpending/mcp-censys) integration lets you query Censys data conversationally, turning complex API calls into natural language.
+## How I think about it
 
-**Nerve ADK** - Agent orchestration and development work.
+Security is applied epistemology. The question is never "did the scanner pass" but "how do we *know* this system is secure," and most of what I build is machinery for answering that honestly: verification that doesn't trust the agent that produced the claim, evidence that outlives the run, deterministic code owning the runtime while models own the judgment.
 
-**Prismis** - A data ingestion and analysis platform.
+Philosophy is the method, not the subject. Computers and philosophy were always the same itch, big black boxes to take apart, and I've never treated either as a detour from the other.
 
-**Arsenl** - Security tooling and automation projects.
+## How I got here
 
-**Security Tools** - From [censyspy](https://github.com/nickpending/censys-toolkit) for FQDN discovery to [Sayable](https://github.com/nickpending/sayable) for making AI output more speech-friendly.
+First machine built at 19. MUDs and SLIP by '93. First security role in 2004, formal epistemology by 2006. Since then: attack surface management, vulnerability discovery at scale, and for the last couple of years, building the agents that do that work.
 
-## Recent Discoveries
+## Writing
 
-I've been documenting systematic approaches to prompt engineering and exploring why certain AI "reasoning" methods actually make results worse. My work focuses on bridging the gap between AI capabilities and reliable execution in security contexts.
+The messy reality of security work and of building with LLMs. Why scanners drown teams in noise. What it takes to trust an agent's output without rechecking it by hand. Where the hacker-strategist fits as AI takes over the mechanical parts of the job.
 
-## Writing Focus
+## Beyond security
 
-My writing covers the messy reality of modern security work. I explore questions like: Why do vulnerability scanners generate so much noise? How can we systematically evaluate AI performance? What happens when theoretical security frameworks meet practical exploitation requirements?
-
-I'm particularly interested in the evolution of security roles as AI capabilities expand—how technical depth combines with strategic thinking to orchestrate AI systems while maintaining the adversarial creativity that technology can't replicate.
-
-## Beyond Security
-
-When I'm not building tools or analyzing data:
-* Training BJJ
-* Reading philosophy  
-* Making music
-* Thinking about random problems
-
-## Background
-
-I've spent years working on attack surface management, vulnerability discovery campaigns, and building automation for security analysis. My approach focuses on what actually works in practice versus what sounds impressive in theory.
+BJJ black belt. Philosophy, mostly the Stoics and the epistemologists. Music. Family, which everything above is scheduled around.
 
 ## Contact
 
