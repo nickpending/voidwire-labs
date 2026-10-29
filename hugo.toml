@@ -22,7 +22,7 @@ theme = "PaperMod"
   # Home-Info mode - shows intro at top of posts list
   [params.homeInfoParams]
   Title = "Hi, I'm Rudy (@nickpending)"
-  Content = "I build security tools and write about my discoveries, epiphanies, and ruminations along the way. Exploring how and where AI can help cybersecurity."
+  Content = "Security and AI, mostly. I build agents, tools and a fair amount of my own infrastructure, and write about what it takes to trust any of it."
   
 [[params.socialIcons]]
   name = "github"

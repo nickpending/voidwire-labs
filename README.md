@@ -10,10 +10,9 @@ hugo server -D
 
 ## Deployment
 
-Deployed via Netlify with:
-- Build command: `hugo --minify`
-- Publish directory: `public`
-- Hugo version: 0.128.2
+Cloudflare Workers, static assets from `public/` (see `wrangler.jsonc`).
+Workers Builds runs `hugo --minify` on push to main. Hugo 0.146 or newer;
+PaperMod refuses older builds.
 
 ## Links
 
