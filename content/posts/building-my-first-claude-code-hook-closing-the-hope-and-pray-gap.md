@@ -5,6 +5,7 @@ categories: [ai, development, workflow]
 tags: ["claude-code", "hooks", "code-quality", "workflow-optimization", "claudex"]
 draft: false
 description: "How I discovered that the missing piece in my Claude Code + Desktop workflow wasn't better context management—it was finally having guardrails that actually know my standards."
+superseded: "**Update, October 2026:** the workflow around this hook is gone; the argument isn't. The gate I rely on now runs in ember's build lane before a push, outside the model entirely, which is the same idea taken one step further out."
 ---
 
 ## TL;DR

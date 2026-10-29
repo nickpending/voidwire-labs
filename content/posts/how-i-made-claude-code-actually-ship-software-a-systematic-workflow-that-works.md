@@ -5,6 +5,7 @@ categories: [ai, development, workflow]
 tags: ["claude-code", "workflow", "development", "systematic", "shipping", "hooks"]
 draft: false
 description: "Building a systematic Claude Code workflow with commands, quality gates, and evidence-based completion that consistently ships working software."
+superseded: "**Update, October 2026:** this workflow became momentum and was then replaced outright by ember, a private build lane where orchestration is code and agents are workers. The iteration-and-task shape survived; the slash commands didn't."
 ---
 
 ## TL;DR

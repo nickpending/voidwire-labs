@@ -5,6 +5,7 @@ categories: [ai, development]
 tags: ["ai", "development", "claude", "workflow", "context"]
 draft: false
 description: "Building on the three-layer memory system to eliminate the constant re-explaining of development preferences."
+superseded: "**Update, October 2026:** claudex is retired. Per-language context files gave way to skills and a shared component repo, and the workflow that consumed them was replaced by ember. The problem this post names is still real; this isn't the solution I use."
 ---
 
 ## TL;DR

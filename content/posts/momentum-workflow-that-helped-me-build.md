@@ -5,6 +5,7 @@ categories: [ai, development, workflow]
 tags: ["claude-code", "workflow", "development", "momentum", "shipping", "subagents"]
 draft: false
 description: "Packaging six months of workflow iteration into momentum - a Claude Code workflow that actually ships by treating AI as a compiler for operator expertise."
+superseded: "**Update, October 2026:** momentum is retired. It was replaced by ember, a private build lane where the harness runs the gate and agents are workers, not orchestrators. The thesis below, AI as a compiler for operator expertise, is the one ember is built on."
 ---
 
 A month ago I wrote about making Claude Code actually ship software. The workflow has been through at least six revisions since I started, but this latest version has been stable.
