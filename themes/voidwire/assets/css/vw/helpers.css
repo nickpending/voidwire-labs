@@ -1,0 +1,14 @@
+/* text-emphasis helpers — inline colored spans. Depends on tokens.css.
+ * Clean, collision-safe names; the source docs used terse single letters
+ * (.n .d .s .g .a .big) — mapped here to semantic `em-*` utilities.
+ *  <span class="em-pur">emphasis</span>
+ */
+.em-pur { color: var(--pur); font-weight: 700; }   /* was .n */
+.em-lav { color: var(--lav); }                      /* was .lav */
+.em-cy  { color: var(--cy); }
+.em-dim { color: var(--dim); }                      /* was .d */
+.em-mut { color: var(--mut); }                      /* was .s */
+.em-grn { color: var(--grn); }                      /* was .g / .x */
+.em-amb { color: var(--amb); }                      /* was .a / .am */
+.em-red { color: var(--red); }
+.em-big { font-family: var(--mono); font-size: 15px; color: var(--lav); }  /* was .big */

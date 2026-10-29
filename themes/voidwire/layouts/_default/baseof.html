@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="{{ site.LanguageCode | default "en" }}">
+<head>
+  {{- partial "head.html" . }}
+</head>
+<body>
+  <div class="wrap{{ with .Params.layout }} {{ . }}{{ end }}{{ if and (eq .Kind "page") (eq .Section "posts") }} post{{ end }}">
+    {{- partial "nav.html" . }}
+    {{- block "main" . }}{{ end }}
+    {{- partial "foot.html" . }}
+  </div>
+</body>
+</html>

@@ -2,6 +2,7 @@
 title: "About"
 date: 2026-10-28
 draft: false
+layout: plain
 ---
 
 I'm Rudy Ruiz. Principal security engineer, twenty-plus years in, working where AI meets offensive security.

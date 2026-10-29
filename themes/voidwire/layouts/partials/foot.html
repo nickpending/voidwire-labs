@@ -1,0 +1,5 @@
+<footer class="site-foot">
+  <span>{{ site.Params.footer | default site.Title }}</span>
+  {{- range site.Params.social }}<a href="{{ .url }}" rel="me">{{ .name }}</a>{{ end }}
+  <a href="{{ "index.xml" | relURL }}">rss</a>
+</footer>

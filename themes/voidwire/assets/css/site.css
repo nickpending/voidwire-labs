@@ -1,0 +1,72 @@
+/* labs.voidwire.info — the site's own structure. Every colour is a voidwire token. */
+
+/* reading columns: wide by default, the article measure on posts and plain pages */
+.wrap { max-width: 1080px; }
+.wrap.post { max-width: 720px; }
+.wrap.plain { max-width: 760px; }
+
+/* chrome */
+.site-nav { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 22px 0 0;
+  font-family: var(--mono); font-size: var(--fs-xs); letter-spacing: .12em; text-transform: uppercase; }
+.site-nav .brand { color: var(--ink); font-family: var(--disp); font-weight: var(--fw-bold); font-size: 15px;
+  letter-spacing: var(--track-tight); text-transform: none; }
+.site-nav .brand b { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.site-nav .links { display: flex; gap: 22px; }
+.site-nav .links a { color: var(--mut); }
+.site-nav .links a[aria-current] { color: var(--cy); }
+.site-foot { margin-top: 90px; padding-top: 22px; border-top: var(--bw) solid var(--line);
+  font-family: var(--mono); font-size: var(--fs-2xs); color: var(--dim); display: flex; gap: 18px; flex-wrap: wrap; letter-spacing: .06em; }
+.site-foot a { color: var(--mut); }
+
+/* home hero */
+.home-hero { padding: 64px 0 0; }
+
+/* post index: dated rows grouped by year */
+.year { margin: 56px 0 10px; }
+.cols .year:first-child, .plist-page .year:first-child { margin-top: 8px; }
+.plist { display: grid; grid-template-columns: 96px minmax(0, 1fr) auto; column-gap: 20px; align-items: baseline; }
+.plist .d { font-family: var(--mono); font-size: var(--fs-xs); color: var(--dim); letter-spacing: .04em; padding: 13px 0; }
+.plist .t { padding: 13px 0; border-bottom: var(--bw) solid var(--line); min-width: 0; }
+.plist .t a { color: var(--ink); font-size: 16.5px; font-weight: var(--fw-med); letter-spacing: -.1px; }
+.plist .t a:hover { color: var(--lav); text-decoration: none; }
+.plist .t .s { display: block; color: var(--mut); font-size: 13.5px; margin-top: 3px; max-width: 62ch; }
+.plist .g { padding: 13px 0; border-bottom: var(--bw) solid var(--line); display: flex; gap: 6px; justify-content: flex-end; align-self: stretch; align-items: baseline; }
+@media (max-width: 640px) { .plist { grid-template-columns: 1fr; } .plist .d { padding-bottom: 0; } .plist .g { display: none; } }
+
+/* home split: posts beside what's being built */
+.cols { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 48px; align-items: start; margin-top: 40px; }
+@media (max-width: 900px) { .cols { grid-template-columns: 1fr; } .side { order: -1; } }
+.side h2 { margin-top: 8px; }
+.side .card { margin-bottom: 10px; padding: 14px 16px; }
+.side .card h3 { font-size: 14.5px; display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.side .card p { font-size: 13px; margin-top: 5px; }
+.side .more { font-family: var(--mono); font-size: var(--fs-2xs); letter-spacing: .12em; text-transform: uppercase; }
+
+/* post: the superseded note sits between header and body */
+.superseded { margin: 0 0 22px; }
+
+/* post body extras the prose atom leaves to the site */
+.prose img { max-width: 100%; height: auto; border-radius: var(--radius-md); border: var(--bw) solid var(--line); }
+.prose table { border-collapse: collapse; width: 100%; font-size: 15px; margin: 0 0 20px; }
+.prose th, .prose td { border-bottom: var(--bw) solid var(--line); padding: 8px 10px; text-align: left; }
+.prose th { color: var(--ink); font-weight: var(--fw-semi); }
+.prose .highlight pre, .prose pre.chroma, .prose .chroma .lntable, .prose .chroma .lntd { background: var(--panel2); }
+.prose .highlight table, .prose .lntable { width: 100%; margin: 0; }
+.prose .lntd { padding: 0; border: 0; vertical-align: top; }
+.prose .lnt { color: var(--dim); margin-right: 12px; user-select: none; }
+.post-nav { display: flex; justify-content: space-between; gap: 18px; margin-top: 48px; padding-top: 18px; border-top: var(--bw) solid var(--line); font-size: 14px; }
+.post-nav a { color: var(--mut); max-width: 48%; }
+.post-nav a:hover { color: var(--lav); text-decoration: none; }
+.post-nav small { display: block; font-family: var(--mono); font-size: var(--fs-2xs); color: var(--dim); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 3px; }
+
+/* plain page (about): article header without a byline */
+.page-head { padding: 64px 0 10px; }
+
+/* projects: grouped cards, retired as a compact list */
+.projects header { padding: 64px 0 10px; }
+.retired { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 6px 28px; }
+.retired .r { display: flex; gap: 12px; padding: 10px 0; border-bottom: var(--bw) solid var(--line); font-size: 13.5px; color: var(--mut); }
+.retired .r b { color: var(--ink); min-width: 92px; font-weight: var(--fw-semi); }
+
+/* 404 */
+.lost { padding: 120px 0; }

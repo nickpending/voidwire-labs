@@ -1,0 +1,17 @@
+{{ define "main" }}
+<header>
+  <div class="eyebrow">{{ .Section }} · {{ .Date.Format "2006" }}</div>
+  <h1>{{ .Title }}</h1>
+  <div class="byline">
+    <span>{{ .Date.Format "2006-01-02" }}</span><span>{{ site.Params.author }}</span><span>{{ .ReadingTime }} min</span>
+    {{- range .Params.tags }}<a class="b-tag" href="{{ (site.GetPage (printf "/tags/%s" (urlize .))).RelPermalink }}">#{{ . }}</a>{{ end }}
+  </div>
+  {{- with .Description }}<p class="article-lede">{{ . }}</p>{{ end }}
+</header>
+{{- with .Params.superseded }}<div class="callout key superseded">{{ . | markdownify }}</div>{{ end }}
+<div class="prose">{{ .Content }}</div>
+<nav class="post-nav" aria-label="Nearby posts">
+  {{- with .NextInSection }}<a href="{{ .RelPermalink }}"><small>Newer</small>{{ .Title }}</a>{{ else }}<span></span>{{ end }}
+  {{- with .PrevInSection }}<a href="{{ .RelPermalink }}" style="text-align:right"><small>Older</small>{{ .Title }}</a>{{ end }}
+</nav>
+{{ end }}

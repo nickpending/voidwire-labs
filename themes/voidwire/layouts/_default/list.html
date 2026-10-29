@@ -1,0 +1,10 @@
+{{ define "main" }}
+<header class="page-head">
+  <div class="eyebrow">{{ if .IsSection }}{{ .Section }}{{ else }}{{ .Data.Plural }} · {{ .Data.Term }}{{ end }}</div>
+  <h1>{{ .Title }}</h1>
+  {{- with .Content }}<div class="lede">{{ . }}</div>{{ end }}
+</header>
+<div class="plist-page">
+  {{- partial "post-rows.html" .Pages }}
+</div>
+{{ end }}

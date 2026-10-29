@@ -1,0 +1,23 @@
+{{ define "main" }}
+<header>
+  <div class="eyebrow">projects · {{ .Date.Format "2006-01" }}</div>
+  <h1>{{ .Title }}</h1>
+  <div class="lede">{{ .Content }}</div>
+</header>
+{{- range site.Data.projects.groups }}
+<h2>{{ .name }}</h2>
+<div class="grid">
+  {{- range .items }}
+  <div class="card">
+    <div class="hd"><h3>{{ with .url }}<a href="{{ . }}">{{ end }}{{ .name }}{{ with .url }}</a>{{ end }}</h3><span class="pill {{ .tone }}">{{ .visibility }}</span></div>
+    <div class="stmt">{{ .blurb }}</div>
+  </div>
+  {{- end }}
+</div>
+{{- end }}
+<h2>Retired</h2>
+<p class="sectsub">{{ site.Data.projects.retired_note }}</p>
+<div class="retired">
+  {{- range site.Data.projects.retired }}<div class="r"><b>{{ .name }}</b><span>{{ .blurb }}</span></div>{{ end }}
+</div>
+{{ end }}

@@ -1,0 +1,158 @@
+/* voidwire — design tokens (single source of the values)
+ *
+ * Harvested 2026-07-10 from the three converged example docs
+ * (dream-memory-architecture, agentic-loops-field-guide, cve-event-horizon),
+ * which agree on this palette verbatim. This is the EVOLVED canonical —
+ * purple-primary, bg #08080c — newer than visual-foundations' tokyo-noir
+ * (cyan-primary #00D9FF / bg #0a0e14). visual-foundations should be updated
+ * to match this (see README "Palette decision").
+ *
+ * RULED 2026-07-10 (rudy): evolved-purple-primary IS the canonical voidwire palette.
+ * visual-foundations (cyan-primary #00D9FF / #0a0e14) is now the stale outlier —
+ * refresh it to match these values (per the WO).
+ *
+ * Naming: short names (--bg, --cy) as the examples use them. Namespacing to
+ * --vw-* is a promote-time decision (matters when external apps consume this).
+ */
+:root {
+  /* ─── Backgrounds & surfaces ─────────────────────────── */
+  --bg:      #08080c;   /* page */
+  --panel:   #0f0f16;   /* card / raised */
+  --panel2:  #14141d;   /* elevated / inset */
+  --line:    #23232f;   /* borders, dividers */
+
+  /* ─── Ink / text ramp ────────────────────────────────── */
+  --ink:     #e8e8f0;   /* headings, emphasis */
+  --read:    #c6c6d0;   /* long-form reading body (brighter than --mut for prose) */
+  --mut:     #8a8a9a;   /* secondary / muted UI text */
+  --dim:     #5a5a68;   /* labels, timestamps, placeholders */
+
+  /* ─── Accent palette (purple-primary) ────────────────── */
+  --pur:     #9F4DFF;   /* PRIMARY — gradients, hero, emphasis */
+  --pur2:    #b97dff;   /* primary hover / lighter */
+  --lav:     #E6CCFF;   /* secondary emphasis, values */
+  --cy:      #5ad7ff;   /* accent — links, live/section cues */
+
+  /* ─── Semantic (muted) ───────────────────────────────── */
+  --grn:     #46d39a;   /* success / shipped */
+  --amb:     #ffb454;   /* warning / attention */
+  --red:     #ff6b7a;   /* danger */
+
+  /* ─── Gradients ──────────────────────────────────────── */
+  --grad:      linear-gradient(100deg, var(--lav), var(--pur));
+  --grad-sub:  linear-gradient(90deg, var(--cy), var(--pur));
+  /* page ambient wash (from the examples' body background) */
+  --wash: radial-gradient(1100px 600px at 80% -10%, rgba(159,77,255,.10), transparent 60%),
+          radial-gradient(900px 500px at 0% 20%, rgba(90,215,255,.05), transparent 55%);
+
+  /* ─── Type families ──────────────────────────────────── */
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+  --disp: "Archivo", var(--sans);
+
+  /* ─── Spacing scale (8pt grid + half-steps) — from visual-foundations ── */
+  --space-2xs: 4px;  --space-xs: 8px;  --space-sm: 12px; --space-md: 16px;
+  --space-lg: 24px;  --space-xl: 32px; --space-2xl: 48px; --space-3xl: 64px;
+
+  /* ─── Type scale — from visual-foundations ───────────── */
+  --fs-2xs: 11px; --fs-xs: 12px; --fs-sm: 13px; --fs-base: 14px;
+  --fs-md: 16px;  --fs-lg: 20px; --fs-xl: 24px; --fs-2xl: 32px; --fs-3xl: 48px;
+
+  /* ─── Radii / borders / weights ──────────────────────── */
+  --radius-sm: 7px; --radius-md: 11px; --radius-lg: 14px; --radius-pill: 20px;
+  --bw: 1px;
+  --fw-reg: 400; --fw-med: 500; --fw-semi: 600; --fw-bold: 740;
+
+  /* ─── Line height / tracking ─────────────────────────── */
+  --lh-tight: 1.05; --lh-snug: 1.4; --lh-body: 1.55;
+  --track-label: .24em;   /* uppercase mono labels */
+  --track-tight: -.5px;   /* display */
+
+  /* ─── Doc-part tints (tinted borders and washes) ─────── */
+  --edge-cy:  #1b3a44;
+  --edge-amb: #3a2f17;
+  --edge-pur: #2e2440;
+  --edge-grn: #1d4035;
+  --edge-red: #3a2230;
+  --tint-pur-05: rgba(159,77,255,.05);
+  --tint-pur-06: rgba(159,77,255,.06);
+  --tint-pur-07: rgba(159,77,255,.07);
+  --tint-pur-08: rgba(159,77,255,.08);
+  --tint-grn-05: rgba(70,211,154,.05);
+  --cue-cy: rgba(90,215,255,.35);        /* diagram feedback-rail cue */
+
+  /* ─── App (elements/) — read by the vw-* parts ───────── */
+  --line2:   #30303f;   /* the brighter edge of a gradient border */
+  --on-pur:  #ffffff;   /* text on a solid --pur fill */
+  /* -t: a hue's tint fill; -b: its border */
+  --pur-t: rgba(159,77,255,.14); --cy-t: rgba(90,215,255,.10);  --grn-t: rgba(70,211,154,.12);
+  --amb-t: rgba(255,180,84,.12); --red-t: rgba(255,107,122,.12); --dim-t: rgba(138,138,154,.10);
+  --pur-b: rgba(159,77,255,.45); --cy-b: rgba(90,215,255,.40);  --grn-b: rgba(70,211,154,.40);
+  --amb-b: rgba(255,180,84,.40); --red-b: rgba(255,107,122,.40); --dim-b: rgba(138,138,154,.30);
+  --bar:    rgba(15,15,22,.86);  /* the app bar */
+  --shadow: rgba(0,0,0,.45);
+  --scrim:  rgba(4,4,8,.62);     /* behind the command palette */
+  --shimmer: rgba(255,255,255,.35);
+  --mood-base: rgba(159,77,255,.11); --mood-live: rgba(90,215,255,.15); --mood-wait: rgba(255,180,84,.12);
+  --grain: .07;                  /* ambient noise opacity */
+  --fs-display: 34px;            /* app h1 */
+  --fs-hero: 44px; --fs-hero-sm: 32px;
+  --fw-strong: 700; --fw-heavy: 800;
+  --track-ui: .2em;              /* uppercase mono UI labels */
+
+  /* ─── The void: the terrain hero is dark in both themes, so no theme redefines these ── */
+  --void:      #05050a;
+  --void-ink:  #eef0f6;
+  --void-read: #c6c6d0;
+  --void-mut:  #8a8a9a;
+  --void-line: rgba(255,255,255,.07);
+  --void-edge: rgba(255,255,255,.14);
+  --void-chip: rgba(255,255,255,.06);
+  --void-tip:  rgba(8,8,12,.92);
+  --void-tip-edge: rgba(90,215,255,.35);
+  --void-cy:   #5ad7ff;
+  --void-pur:  #b97dff;
+  --void-red:  #ff6b7a;
+  --void-white: #ffffff;
+  --void-glow-cy:  rgba(90,215,255,.08);
+  --void-glow-pur: rgba(159,77,255,.16);
+  --void-fade:    rgba(5,5,10,.55);
+  --void-fade-sm: rgba(5,5,10,.5);
+  --void-grad: linear-gradient(100deg, #E6CCFF, #9F4DFF 55%, #5ad7ff);
+  /* the terrain's particle sprite: a white core fading out, recoloured per particle */
+  --void-spark:      rgba(255,255,255,1);
+  --void-spark-half: rgba(255,255,255,.55);
+  --void-spark-none: rgba(255,255,255,0);
+}
+
+/* ─── App pages only: the marker, then the light dress ─────────────────────────────
+ * render_app_page puts data-vw-app on <html>; documents never carry it, so they stay dark.
+ * The light dress is written twice because CSS cannot share one declaration block between a
+ * media query and an attribute selector; the two blocks must stay identical. */
+:root[data-vw-app] { color-scheme: dark; }
+@media (prefers-color-scheme: light) { :root[data-vw-app]:not([data-theme=dark]) {
+  --bg:#fbfafd;--panel:#f5f3fa;--panel2:#ece8f4;--line:#ddd7e8;--line2:#c3bad4;
+  --ink:#17121f;--read:#3a3344;--mut:#5f5570;--dim:#8d84a0;
+  --pur:#7a2fd4;--pur2:#6a22c0;--lav:#b58cf0;--cy:#0b7fae;
+  --grn:#17805a;--amb:#a86a00;--red:#c23a4e;--on-pur:#ffffff;
+  --pur-t:rgba(122,47,212,.10);--cy-t:rgba(11,127,174,.10);--grn-t:rgba(23,128,90,.10);
+  --amb-t:rgba(168,106,0,.12);--red-t:rgba(194,58,78,.10);--dim-t:rgba(95,85,112,.08);
+  --pur-b:rgba(122,47,212,.35);--cy-b:rgba(11,127,174,.35);--grn-b:rgba(23,128,90,.35);
+  --amb-b:rgba(168,106,0,.4);--red-b:rgba(194,58,78,.38);--dim-b:rgba(95,85,112,.28);
+  --grad:linear-gradient(100deg,#9b5de5,#5b1fb0);--wash:none;
+  --bar:rgba(245,243,250,.9);--shadow:rgba(40,20,70,.18);--scrim:rgba(30,20,50,.28);
+  --mood-base:rgba(122,47,212,.07);--mood-live:rgba(11,127,174,.09);--mood-wait:rgba(168,106,0,.09);--grain:.035;color-scheme:light;
+} }
+:root[data-vw-app][data-theme=light] {
+  --bg:#fbfafd;--panel:#f5f3fa;--panel2:#ece8f4;--line:#ddd7e8;--line2:#c3bad4;
+  --ink:#17121f;--read:#3a3344;--mut:#5f5570;--dim:#8d84a0;
+  --pur:#7a2fd4;--pur2:#6a22c0;--lav:#b58cf0;--cy:#0b7fae;
+  --grn:#17805a;--amb:#a86a00;--red:#c23a4e;--on-pur:#ffffff;
+  --pur-t:rgba(122,47,212,.10);--cy-t:rgba(11,127,174,.10);--grn-t:rgba(23,128,90,.10);
+  --amb-t:rgba(168,106,0,.12);--red-t:rgba(194,58,78,.10);--dim-t:rgba(95,85,112,.08);
+  --pur-b:rgba(122,47,212,.35);--cy-b:rgba(11,127,174,.35);--grn-b:rgba(23,128,90,.35);
+  --amb-b:rgba(168,106,0,.4);--red-b:rgba(194,58,78,.38);--dim-b:rgba(95,85,112,.28);
+  --grad:linear-gradient(100deg,#9b5de5,#5b1fb0);--wash:none;
+  --bar:rgba(245,243,250,.9);--shadow:rgba(40,20,70,.18);--scrim:rgba(30,20,50,.28);
+  --mood-base:rgba(122,47,212,.07);--mood-live:rgba(11,127,174,.09);--mood-wait:rgba(168,106,0,.09);--grain:.035;color-scheme:light;
+}

@@ -1,0 +1,11 @@
+{{- /* dated rows grouped by year; takes a page collection */ -}}
+{{- range .GroupByDate "2006" }}
+<h2 class="year">{{ .Key }}</h2>
+<div class="plist">
+  {{- range .Pages }}
+  <span class="d">{{ .Date.Format "01-02" }}</span>
+  <span class="t"><a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ with .Description }}<span class="s">{{ . }}</span>{{ end }}</span>
+  <span class="g">{{ with .Params.tags }}{{ range first 2 . }}<span class="pill {{ index site.Params.tagTones . | default "" }}">{{ . }}</span>{{ end }}{{ end }}</span>
+  {{- end }}
+</div>
+{{- end }}

@@ -1,0 +1,4 @@
+name = "voidwire"
+license = "MIT"
+description = "labs.voidwire.info look, built from the voidwire design system. CSS under assets/css/vw/ is synced from the voidwire checkout by scripts/sync-voidwire.sh; edit it there."
+min_version = "0.146.0"

@@ -1,0 +1,15 @@
+# "Building now" on the home page. Four entries read well; the full list is data/projects.yaml.
+- name: Manifaces
+  visibility: private
+  blurb: Read the policy the browser ships. Test whether the server agrees.
+- name: Ember
+  visibility: private
+  blurb: One identity, one memory, one build lane, and a daemon that works overnight.
+- name: Prismis
+  visibility: public
+  url: https://github.com/nickpending/prismis
+  blurb: Reads your feeds, scores every item against what you care about, shows the few that matter.
+- name: Earshot
+  visibility: public
+  url: https://github.com/nickpending/earshot
+  blurb: A Limitless pendant used with no cloud.

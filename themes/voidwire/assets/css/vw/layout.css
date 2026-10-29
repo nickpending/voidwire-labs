@@ -1,0 +1,9 @@
+/* layout — multi-column composition grids. These are what let a doc COMPOSE
+ * (2-up / 3-up) instead of stacking. Depends on tokens.css.
+ *  <div class="two"><div class="card">…</div><div class="card">…</div></div>
+ */
+.two   { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 14px; }
+.three { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+.grp   { break-inside: avoid; margin-bottom: 20px; }
+.grp ul { list-style: none; margin: 0; padding: 0; }
+@media (max-width: 820px) { .two, .three { grid-template-columns: 1fr; } }

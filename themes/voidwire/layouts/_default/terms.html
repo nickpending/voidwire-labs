@@ -1,0 +1,4 @@
+{{ define "main" }}
+<header class="page-head"><div class="eyebrow">{{ .Data.Plural }}</div><h1>{{ .Title }}</h1></header>
+<p>{{ range .Data.Terms.ByCount }}<a class="pill" href="{{ .Page.RelPermalink }}">{{ .Page.Title }} · {{ .Count }}</a> {{ end }}</p>
+{{ end }}

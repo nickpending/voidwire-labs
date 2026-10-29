@@ -1,0 +1,22 @@
+{{ define "main" }}
+<header class="home-hero">
+  <div class="eyebrow">{{ site.Params.eyebrow | default (replaceRE "^https?://" "" site.BaseURL) }}</div>
+  <h1>{{ site.Params.heroTitle | default site.Title | safeHTML }}</h1>
+  <p class="lede">{{ site.Params.lede | safeHTML }}</p>
+</header>
+<div class="cols">
+  <div class="main">
+    {{- partial "post-rows.html" (where site.RegularPages "Section" "posts") }}
+  </div>
+  <aside class="side">
+    <h2>Building now</h2>
+    {{- range site.Data.now }}
+    <div class="card accent" style="--accent:var(--{{ if eq .visibility "public" }}cy{{ else }}pur{{ end }})">
+      <h3>{{ with .url }}<a href="{{ . }}">{{ $.Scratch.Set "n" true }}{{ end }}{{ .name }}{{ with .url }}</a>{{ end }}<span class="pill {{ if eq .visibility "public" }}live{{ else }}synth{{ end }}">{{ .visibility }}</span></h3>
+      <p>{{ .blurb }}</p>
+    </div>
+    {{- end }}
+    <a class="more" href="{{ "projects/" | relURL }}">All projects →</a>
+  </aside>
+</div>
+{{ end }}

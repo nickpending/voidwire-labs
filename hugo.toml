@@ -1,38 +1,36 @@
 baseURL = "https://labs.voidwire.info"
 languageCode = "en-us"
 title = "Voidwire Labs"
-theme = "PaperMod"
+theme = "voidwire"
 
 [params]
   description = "Breaking Things to Build Better Things"
-  author = "nickpending"
-  showReadingTime = true
-  showPostNavLinks = true
-  showBreadCrumbs = false
-  showCodeCopyButtons = true
-  
-  # Analytics
+  author = "rudy"
+  eyebrow = "labs.voidwire.info"
+  heroTitle = "Voidwire <span class=\"g\">Labs</span>"
+  lede = "Security and AI, mostly. I build agents, tools and a fair amount of my own infrastructure, and write about what it takes to <b>trust any of it</b>."
+  footer = "rudy ruiz · labs.voidwire.info"
+
+  # voidwire pill class per tag, for the two tags shown on an index row
+  [params.tagTones]
+  claude-code = "info"
+  security = "live"
+  ai = "synth"
+  workflow = "warn"
+
   [params.analytics]
   [params.analytics.plausible]
   domain = "labs.voidwire.info"
-  
-  # SEO
-  images = ["/assets/images/labs.voidwire.info-preview.svg"]
-  
-  # Home-Info mode - shows intro at top of posts list
-  [params.homeInfoParams]
-  Title = "Hi, I'm Rudy (@nickpending)"
-  Content = "Security and AI, mostly. I build agents, tools and a fair amount of my own infrastructure, and write about what it takes to trust any of it."
-  
-[[params.socialIcons]]
+
+[[params.social]]
   name = "github"
   url = "https://github.com/nickpending"
-  
-[[params.socialIcons]]
+
+[[params.social]]
   name = "linkedin"
   url = "https://www.linkedin.com/in/securityarchitecture/"
-  
-[[params.socialIcons]]
+
+[[params.social]]
   name = "mastodon"
   url = "https://infosec.exchange/@nickpending"
 
@@ -42,13 +40,13 @@ theme = "PaperMod"
   name = "Posts"
   url = "/posts/"
   weight = 10
-  
+
   [[menu.main]]
   identifier = "projects"
   name = "Projects"
   url = "/projects/"
   weight = 15
-  
+
   [[menu.main]]
   identifier = "about"
   name = "About"
@@ -57,6 +55,6 @@ theme = "PaperMod"
 
 [markup]
   [markup.highlight]
-    style = "github"
-    lineNos = true
+    style = "catppuccin-mocha"
+    lineNos = false
     noClasses = false

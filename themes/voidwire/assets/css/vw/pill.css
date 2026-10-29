@@ -1,0 +1,18 @@
+/* pill — tiny rounded status/label token. Depends on tokens.css.
+ * <span class="pill live">shipped</span>   <span class="pill synth">designed</span>
+ * Tinted variant border-colors are the per-accent --edge-* tokens.
+ */
+.pill {
+  font-family: var(--mono); font-size: 10px;
+  padding: 2px 8px; border-radius: var(--radius-pill);
+  border: var(--bw) solid var(--line); color: var(--mut);
+  white-space: nowrap; display: inline-block;
+}
+.pill.live   { color: var(--grn); border-color: var(--edge-grn); }
+.pill.synth  { color: var(--lav); border-color: var(--edge-pur); }  /* "designed" */
+.pill.warn   { color: var(--amb); border-color: var(--edge-amb); }
+.pill.info     { color: var(--cy);  border-color: var(--edge-cy); }
+.pill.measured { color: var(--cy);  border-color: var(--edge-cy); }
+.pill.new       { color: var(--lav); border-color: var(--edge-pur); }
+.pill.proto     { color: var(--amb); border-color: var(--edge-amb); }  /* prototype status */
+.pill.unstarted { color: var(--red); border-color: var(--edge-red); }  /* not started */

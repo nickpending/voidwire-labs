@@ -1,0 +1,40 @@
+/* card — a bordered panel; optional left accent bar (--accent) + row helpers.
+ * Union of the card variants across dream + cve. Depends on tokens.css.
+ * <div class="card" style="--accent:var(--cy)">
+ *   <div class="who">label</div><h3>Title</h3>
+ *   <div class="row"><span class="k">key</span><span class="v">value</span></div>
+ * </div>
+ */
+.card {
+  background: var(--panel);
+  border: var(--bw) solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  position: relative;
+  overflow: hidden;
+}
+.card > h3, .card > h4 { margin: 0 0 4px; font-size: 15px; }
+.card p { color: var(--mut); font-size: 13.5px; margin: 9px 0 0; }
+
+/* card internals — header row (title + a tag/pill) and a statement line */
+.card .hd { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 9px; }
+.card .stmt { font-size: .9rem; color: var(--mut); margin-bottom: 14px; }
+
+/* optional left accent bar — set --accent per card */
+.card.accent::before {
+  content: ""; position: absolute; inset: 0 auto 0 0;
+  width: 3px; background: var(--accent, var(--pur));
+}
+
+/* label eyebrow inside a card */
+.card .who {
+  font-family: var(--mono); font-size: var(--fs-2xs); color: var(--dim);
+  text-transform: uppercase; letter-spacing: .12em;
+}
+/* key/value rows */
+.card .row { display: flex; gap: var(--space-xs); align-items: baseline; font-size: var(--fs-sm); margin-top: 11px; color: var(--mut); }
+.card .row .k { font-family: var(--mono); font-size: 10.5px; color: var(--dim); min-width: 74px; text-transform: uppercase; letter-spacing: .08em; }
+.card .row .v { color: var(--ink); }
+
+/* responsive grid of cards */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
